@@ -1,0 +1,31 @@
+﻿{% extends "layout.html" %}
+{% block body %}
+<h1>PRM 翻译库</h1>
+<table class="table table-striped table-hover table-condensed">
+ <thead>
+  <tr>
+   <td><p><b><span>功能模块</span></b></p></td>
+   <td><p><b><span>中文</span></b></p></td>
+   <td><p><b><span>英文</span></b></p></td>
+   <td><p><b><span>操作</span></b></p></td>
+  </tr>
+ </thead>
+
+ <tbody>
+  {% for entry in entries %}
+	 <tr>
+	  <td>  <p><span>{{ entry.area }}</span></p></td>
+	  <td>  <p><span>{{ entry.chinese }}</span></p></td>
+	  <td>  <p><span>{{ entry.english }}</span></p></td>
+	  <td>  
+	  <div class="btn-group btn-group-sm">
+	    <button type="button" class="btn btn-default">修改</button>
+		<button type="button" class="btn btn-default">删除</button>
+	  </div></td>
+	 </tr>
+	{% else %}
+    <tr><em>Unbelievable.  No entries here so far</em></tr>
+  {% endfor %}
+  </tbody>
+ </table>
+{% endblock %}

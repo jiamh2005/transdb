@@ -1,0 +1,11 @@
+﻿{% extends "layout.html" %}
+{% block body %}
+    <h1>Upload new File</h1>
+    <form role="form" action="import" method=post enctype="multipart/form-data">
+      <div class="form-group">
+        <input type="file" name=file id="InputFile">
+        <p class="help-block">请上传Excel2007格式的数据文件</p>
+      </div>
+      <button type="submit" value=Upload class="btn btn-default">Submit</button>
+    </form>
+{% endblock %}
